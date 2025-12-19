@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import medicalImg from "../../assets/images/medical-team.png";
+import { ArrowRight } from "lucide-react";
 
 export default function VisionMission() {
   const points = [
@@ -17,61 +18,75 @@ export default function VisionMission() {
   ];
 
   return (
-    <section className="py-28 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <section className="relative py-32 bg-white overflow-hidden">
+      {/* Background Precision Grid - Using the Mint Green tint for medical blueprints feel */}
+      <div className="absolute inset-0 bg-[radial-gradient(#d1fae5_1px,transparent_1px)] [background-size:32px_32px] opacity-60 -z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
 
         {/* Left Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block mb-6 px-5 py-2 rounded-full bg-green-50 text-green-700 text-sm font-semibold">
+          {/* Eyebrow badge in Brand Green and Deep Forest text */}
+          <span className="inline-block mb-6 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest">
             Vision & Mission
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            Shaping the future of{" "}
-            <span className="text-green-600">global healthcare access</span>
+          {/* Heading - Deep Forest Green (#062419) */}
+          <h2 className="text-4xl md:text-6xl font-bold text-[#062419] leading-[1.1] tracking-tight">
+            Shaping the future of <br />
+            <span className="text-green-600 underline decoration-green-100 underline-offset-8 decoration-4">
+              global healthcare access
+            </span>
           </h2>
 
-          <p className="mt-8 text-lg text-gray-600 max-w-xl leading-relaxed">
+          {/* Subtext - Deep Dark Teal (#0a3d2e) */}
+          <p className="mt-10 text-xl text-[#0a3d2e] max-w-xl leading-relaxed font-medium opacity-90">
             Our vision is to redefine medical tourism by combining world-class
-            clinical excellence, affordability, and compassionate patient care
-            — powered by technology and trust.
+            clinical excellence, affordability, and compassionate patient care.
           </p>
 
-          <div className="mt-12 relative">
+          {/* Image Container - Removed grey slates, added Mint/Green borders */}
+          <div className="mt-12 relative p-2 bg-green-50/50 rounded-[2.5rem] border border-green-100">
             <img
               src={medicalImg}
               alt="Medical team"
-              className="rounded-3xl shadow-xl w-full object-cover"
+              className="rounded-[2rem] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-sm shadow-green-900/5"
             />
-            <div className="absolute inset-0 rounded-3xl ring-1 ring-black/5" />
           </div>
         </motion.div>
 
-        {/* Right Cards */}
+        {/* Right Cards - Minimalist Vertical Steps */}
         <div className="space-y-8">
           {points.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-xl transition"
+              className="group relative bg-white rounded-[2rem] p-10 border border-green-100 hover:border-green-300 transition-all duration-300 shadow-sm shadow-green-900/5"
             >
-              <div className="absolute -top-6 -left-6 w-14 h-14 rounded-2xl bg-green-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
-                {item.number}
+              <div className="flex items-center gap-4 mb-6">
+                {/* Numbers in Mint Green turning Brand Green on hover */}
+                <span className="text-5xl font-black text-green-50 group-hover:text-green-100 transition-colors">
+                  {item.number}
+                </span>
+                <div className="h-px flex-1 bg-green-50 group-hover:bg-green-200 transition-all"></div>
+                <ArrowRight size={20} className="text-green-200 group-hover:text-green-600 transition-colors" />
               </div>
 
-              <h3 className="text-2xl font-semibold text-gray-900">
+              {/* Title - Deep Forest Green */}
+              <h3 className="text-2xl font-bold text-[#062419] tracking-tight">
                 {item.title}
               </h3>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
+              {/* Description - Dark Teal */}
+              <p className="mt-4 text-[#0a3d2e] leading-relaxed font-medium opacity-80">
                 {item.desc}
               </p>
             </motion.div>

@@ -7,6 +7,8 @@ import HospitalNetwork from "../pages/HospitalNetwork";
 import InternationalPatients from "../pages/InternationalPatients";
 import SuccessStories from "../pages/SuccessStories";
 import Contact from "../pages/Contact";
+import ServiceDetail from "../components/common/ServiceDetail";
+import HospitalCategory from "../pages/HospitalCategory";
 
 export default function AppRoutes() {
   return (
@@ -14,7 +16,10 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About/>} />
       <Route path="/services" element={<Services/>} />
+      <Route path="/services/:slug" element={<ServiceDetail />} />
+
       <Route path="/hospitals" element={<HospitalNetwork />} />
+      <Route path="/hospitals/:slug" element={<HospitalCategory />} />
       <Route path="/international-patients" element={<InternationalPatients />} />
       <Route path="/success-stories" element={<SuccessStories />} />
       <Route path="/contact" element={<Contact />} />

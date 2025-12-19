@@ -6,6 +6,7 @@ import {
   Plane,
   Hospital,
   HeartPulse,
+  ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -39,10 +40,13 @@ export default function PatientJourney() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="relative py-24 bg-white border-b border-green-50 overflow-hidden">
+      {/* Background Precision Grid - Mint Green tint */}
+      <div className="absolute inset-0 bg-[radial-gradient(#d1fae5_1px,transparent_1px)] [background-size:40px_40px] opacity-60 -z-10"></div>
+
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
+        {/* Heading Section */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -50,68 +54,83 @@ export default function PatientJourney() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-green-100 text-green-700">
+          <span className="inline-block mb-4 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] rounded-full bg-green-50 border border-green-100 text-green-700">
             How It Works
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#062419] tracking-tight">
             Your treatment journey with{" "}
-            <span className="text-green-600">Lemoncaps</span>
+            <span className="text-green-600 underline decoration-green-100 underline-offset-8">Lemoncaps</span>
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="mt-6 text-lg text-[#0a3d2e] font-medium opacity-90">
             A simple, transparent and fully managed medical journey — from
             consultation to recovery.
           </p>
         </motion.div>
 
-        {/* Steps */}
+        {/* Steps Grid */}
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-20 grid md:grid-cols-5 gap-8"
+          className="relative mt-20 grid md:grid-cols-5 gap-4"
         >
           {steps.map((step, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
-              whileHover={{ y: -8 }}
-              className="relative bg-gray-50 rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition"
+              whileHover={{ y: -5 }}
+              className="group relative bg-white border border-green-100 rounded-[2rem] p-8 text-center transition-all duration-300 hover:border-green-300 shadow-sm shadow-green-900/5"
             >
-              <div className="w-14 h-14 mx-auto rounded-2xl bg-green-600 text-white flex items-center justify-center">
+              {/* Connector Arrow (Desktop Only) using Deep Green */}
+              {i < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 z-10 text-green-100 group-hover:text-green-400 transition-colors">
+                  <ArrowRight size={20} />
+                </div>
+              )}
+
+              {/* Step Number Badge - Mint to Green */}
+              <div className="mb-6 flex justify-center">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-50 border border-green-100 text-[10px] font-bold text-green-700/50 group-hover:text-green-700 transition-colors">
+                  {`0${i + 1}`}
+                </span>
+              </div>
+
+              {/* Icon Container with Theme transition */}
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-green-50 text-green-600 flex items-center justify-center transition-all group-hover:bg-green-600 group-hover:text-white duration-300">
                 {step.icon}
               </div>
 
-              <h3 className="mt-6 text-lg font-semibold text-gray-900">
+              <h3 className="mt-8 text-lg font-bold text-[#062419] leading-tight min-h-[56px] flex items-center justify-center">
                 {step.title}
               </h3>
 
-              <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              {/* Decorative line in Brand Green */}
+              <div className="mt-4 h-px w-8 bg-green-100 mx-auto group-hover:w-16 group-hover:bg-green-500 transition-all duration-500"></div>
+
+              <p className="mt-6 text-sm text-[#0a3d2e] leading-relaxed font-medium opacity-80">
                 {step.desc}
               </p>
-
-              <span className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-sm font-bold text-gray-700">
-                {`0${i + 1}`}
-              </span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* CTA */}
+        {/* CTA - Deep Forest Green Hover */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-24 text-center"
         >
           <Link
             to="/services"
-            className="inline-block px-10 py-4 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition"
+            className="group inline-flex items-center gap-2 px-10 py-4 rounded-full bg-green-600 text-white font-bold hover:bg-[#062419] transition-all shadow-xl shadow-green-900/10 active:scale-95"
           >
             Explore Our Services
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
 
