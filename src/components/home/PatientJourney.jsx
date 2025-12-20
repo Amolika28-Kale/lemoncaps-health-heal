@@ -164,7 +164,7 @@ export default function PatientJourney() {
             to="/services"
             className="flex items-center gap-3 px-12 py-5 rounded-full bg-white text-slate-900 font-bold hover:bg-emerald-600 hover:text-white transition-all duration-300 group"
           >
-            Start Your Consultation Now
+            Explore Our Services
             <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
           </Link>
         </motion.div>
