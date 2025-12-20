@@ -68,7 +68,7 @@ export default function Advantage() {
                 key={i}
                 variants={fadeUp}
                 whileHover={{ y: -5 }}
-                className="group relative bg-white rounded-[2.5rem] p-10 border border-green-100 hover:border-green-300 transition-all duration-300"
+                className="group relative bg-green rounded-[2.5rem] p-10 border border-green-100 hover:border-green-300 transition-all duration-300"
               >
                 {/* Micro-Interaction Arrow using Deep Green */}
                 <div className="absolute top-8 right-8 text-green-200 group-hover:text-green-600 transition-colors">

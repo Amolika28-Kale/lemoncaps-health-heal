@@ -7,7 +7,7 @@ import meetingImg from "../assets/images/hospital-meeting.png";
 import hospitalWardImg from "../assets/images/ward.png";
 import operationTheatreImg from "../assets/images/operation-theatre.png";
 import patientCareImg from "../assets/images/pateint-care.png";
-import infrastructureImg from "../assets/images/infrastructure.png";
+import bedsImg from "../assets/images/patients-beds.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -78,25 +78,33 @@ export default function HospitalNetwork() {
             </p>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-2 gap-4"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[meetingImg, hospitalWardImg, operationTheatreImg, patientCareImg].map(
-              (img, i) => (
-                <div key={i} className="relative group overflow-hidden rounded-2xl border border-green-100 bg-green-50">
-                  <img
-                    src={img}
-                    className="h-48 w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
-                    alt="Hospital facility"
-                  />
-                </div>
-              )
-            )}
-          </motion.div>
+  <motion.div
+  className="grid grid-cols-2 gap-4"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  {[meetingImg, hospitalWardImg, operationTheatreImg, patientCareImg].map(
+    (img, i) => (
+      <div
+        key={i}
+        className="relative group overflow-hidden rounded-2xl border border-green-100 bg-green-50"
+      >
+        <img
+          src={img}
+          alt="Hospital facility"
+          className="
+            h-48 w-full object-cover
+            transition-transform duration-700 ease-out
+            scale-105 group-hover:scale-110
+          "
+        />
+      </div>
+    )
+  )}
+</motion.div>
+
         </div>
       </div>
 
@@ -163,7 +171,7 @@ export default function HospitalNetwork() {
           <motion.div className="relative p-4">
             <div className="absolute inset-0 bg-green-50 rounded-[3rem] translate-x-4 translate-y-4 -z-10 opacity-70" />
             <img
-              src={infrastructureImg}
+              src={bedsImg}
               alt="Hospital Infrastructure"
               className="rounded-[2.5rem] w-full border-2 border-white shadow-sm"
             />

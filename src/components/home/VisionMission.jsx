@@ -50,14 +50,24 @@ export default function VisionMission() {
             clinical excellence, affordability, and compassionate patient care.
           </p>
 
-          {/* Image Container - Removed grey slates, added Mint/Green borders */}
-          <div className="mt-12 relative p-2 bg-green-50/50 rounded-[2.5rem] border border-green-100">
-            <img
-              src={medicalImg}
-              alt="Medical team"
-              className="rounded-[2rem] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-sm shadow-green-900/5"
-            />
-          </div>
+    {/* Image Container */}
+<div className="mt-12 relative p-2 bg-green-50/50 border border-green-100 rounded-[2.5rem] group">
+  
+  {/* Zoom-safe wrapper */}
+  <div className="overflow-hidden rounded-[2.25rem]">
+    <img
+      src={medicalImg}
+      alt="Medical team"
+      className="
+        w-full h-full object-cover
+        scale-105 group-hover:scale-110
+        transition-transform duration-700 ease-out
+      "
+    />
+  </div>
+
+</div>
+
         </motion.div>
 
         {/* Right Cards - Minimalist Vertical Steps */}
@@ -73,7 +83,7 @@ export default function VisionMission() {
             >
               <div className="flex items-center gap-4 mb-6">
                 {/* Numbers in Mint Green turning Brand Green on hover */}
-                <span className="text-5xl font-black text-green-50 group-hover:text-green-100 transition-colors">
+                <span className="text-5xl font-black text-green-130  transition-colors">
                   {item.number}
                 </span>
                 <div className="h-px flex-1 bg-green-50 group-hover:bg-green-200 transition-all"></div>

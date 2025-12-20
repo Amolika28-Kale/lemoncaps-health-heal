@@ -58,7 +58,7 @@ export default function HospitalCategory() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Back Link */}
         <Link 
-          to="/hospital" 
+          to="/hospitals" 
           className="inline-flex items-center gap-2 text-green-600 font-bold text-sm mb-8 group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />

@@ -80,20 +80,30 @@ export default function About() {
             </p>
           </motion.div>
 
-          <motion.div 
-            className="relative p-3 bg-white border border-green-100 rounded-[2.5rem]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="absolute -inset-2 bg-green-50 rounded-[40px] -z-10 transform rotate-2"></div>
-            <img
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-              alt="Healthcare professionals"
-              className="rounded-[2rem] w-full object-cover border border-green-50 grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </motion.div>
+   <motion.div 
+  className="group relative p-3 bg-white border border-green-100 rounded-[2.5rem]"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  {/* Background tilt */}
+  <div className="absolute -inset-2 bg-green-50 rounded-[40px] -z-10 rotate-2" />
+
+  {/* Image wrapper for zoom control */}
+  <div className="overflow-hidden rounded-[2.5rem]">
+    <img
+      src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+      alt="Healthcare professionals"
+      className="
+        w-full h-full object-cover
+        scale-105 group-hover:scale-110
+        transition-transform duration-700 ease-out
+      "
+    />
+  </div>
+</motion.div>
+
         </div>
       </div>
 
@@ -127,15 +137,31 @@ export default function About() {
       <div className="py-32 border-b border-green-50 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-white border border-green-100 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center shadow-sm shadow-green-900/5">
-            <motion.img
-              src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
-              alt="Founder"
-              className="w-48 h-48 md:w-64 md:h-64 rounded-3xl object-cover border border-green-100 grayscale hover:grayscale-0 transition-all duration-500"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            />
+            <motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="group relative"
+>
+  {/* Soft background layer */}
+  <div className="absolute inset-0 bg-green-50 rounded-[2.5rem] -z-10 translate-x-3 translate-y-3" />
+
+  {/* Image */}
+  <div className="overflow-hidden rounded-[2.5rem]">
+    <motion.img
+      src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
+      alt="Founder"
+      className="
+        w-48 h-48 md:w-64 md:h-64
+        object-cover
+        scale-105 group-hover:scale-110
+        transition-transform duration-700 ease-out
+      "
+    />
+  </div>
+</motion.div>
+
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -230,22 +256,33 @@ function RoadmapCard({ text }) {
 
 function TeamCard({ name, role, img }) {
   return (
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="group"
-    >
-      <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/5] bg-green-50 border border-green-100 shadow-sm shadow-green-900/5">
-        <img
-          src={img}
-          alt={name}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-        />
-      </div>
-      <h3 className="text-xl font-bold text-[#062419] tracking-tight leading-tight">{name}</h3>
-      <p className="text-[10px] font-black text-green-600 uppercase tracking-[0.2em] mt-2">{role}</p>
-    </motion.div>
+<motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="group"
+>
+  <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/5] bg-green-50 border border-green-100 shadow-sm shadow-green-900/5">
+    <img
+      src={img}
+      alt={name}
+      className="
+        w-full h-full object-cover rounded-[2.5rem]
+        scale-105 group-hover:scale-110
+        transition-transform duration-700 ease-out
+      "
+    />
+  </div>
+
+  <h3 className="text-xl font-bold text-[#062419] tracking-tight leading-tight">
+    {name}
+  </h3>
+
+  <p className="text-[10px] font-black text-green-600 uppercase tracking-[0.2em] mt-2">
+    {role}
+  </p>
+</motion.div>
+
   );
 }

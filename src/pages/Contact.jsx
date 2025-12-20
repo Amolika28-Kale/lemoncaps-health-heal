@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import SEO from "../components/common/SEO";
-import { Link } from "react-router-dom";
 import { Mail, Phone, Globe, MessageCircle, CheckCircle2, ArrowRight } from "lucide-react";
 
 const fadeUp = {
@@ -58,8 +57,8 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6 -mt-10 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            ["10,000+", "Patients Assisted"],
-            ["60–80%", "Cost Savings"],
+            ["1500+", "Patients Assisted"],
+            ["65–85%", "Cost Savings"],
             ["15+", "Countries Served"],
             ["24/7", "Patient Support"],
           ].map(([num, label], i) => (
@@ -82,40 +81,61 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20">
         
         {/* FORM SECTION - Clinical White Card */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="bg-white border border-green-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm"
-        >
-          <h2 className="text-3xl font-bold text-[#062419] tracking-tight">
-            Free Medical Consultation
-          </h2>
-          <p className="mt-4 text-[#0a3d2e] font-medium opacity-70">
-            Submit your details. Our medical experts will contact you within <span className="text-[#062419] font-black underline decoration-green-400 underline-offset-4">24 hours</span>.
-          </p>
+    {/* FORM SECTION - Clinical White Card */}
+<motion.div
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  className="bg-white border border-green-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm"
+>
+  <h2 className="text-3xl font-bold text-[#062419] tracking-tight">
+    Free Medical Consultation
+  </h2>
+  <p className="mt-4 text-[#062419] font-medium">
+    Submit your details. Our medical experts will contact you within <span className="text-green-700 font-black underline decoration-green-400 underline-offset-4">24 hours</span>.
+  </p>
 
-          <form className="mt-10 space-y-4">
-            <div className="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="Full Name" className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-medium placeholder:text-green-700/30" />
-              <input type="email" placeholder="Email Address" className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-medium placeholder:text-green-700/30" />
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <input type="text" placeholder="Country" className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-medium placeholder:text-green-700/30" />
-              <input type="text" placeholder="Treatment Required" className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-medium placeholder:text-green-700/30" />
-            </div>
-            <textarea rows="4" placeholder="Brief medical details (optional)" className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-medium resize-none placeholder:text-green-700/30" />
-
-            <button type="submit" className="group w-full py-5 bg-green-600 text-white rounded-full font-black text-lg hover:bg-[#062419] transition-all shadow-xl shadow-green-900/20 flex items-center justify-center gap-2">
+  <form className="mt-10 space-y-4">
+    <div className="grid md:grid-cols-2 gap-4">
+      {/* Updated placeholder and text colors for dark contrast */}
+      <input 
+        type="text" 
+        placeholder="Full Name" 
+        className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border border-green-100 focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-semibold placeholder:text-[#062419]/50" 
+      />
+      <input 
+        type="email" 
+        placeholder="Email Address" 
+        className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border border-green-100 focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-semibold placeholder:text-[#062419]/50" 
+      />
+    </div>
+    <div className="grid md:grid-cols-2 gap-4">
+      <input 
+        type="text" 
+        placeholder="Country" 
+        className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border border-green-100 focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-semibold placeholder:text-[#062419]/50" 
+      />
+      <input 
+        type="text" 
+        placeholder="Treatment Required" 
+        className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border border-green-100 focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-semibold placeholder:text-[#062419]/50" 
+      />
+    </div>
+    <textarea 
+      rows="4" 
+      placeholder="Brief medical details (optional)" 
+      className="w-full px-5 py-4 rounded-2xl bg-green-50/50 border border-green-100 focus:bg-white focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all outline-none text-[#062419] font-semibold resize-none placeholder:text-[#062419]/50" 
+    />
+  <button type="submit" className="group w-full py-5 bg-green-600 text-white rounded-full font-black text-lg hover:bg-[#062419] transition-all shadow-xl shadow-green-900/20 flex items-center justify-center gap-2">
               Get Free Consultation
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
-          </form>
+  </form>
 
-          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 mt-8 py-5 rounded-2xl border border-green-100 text-green-700 font-black text-sm hover:bg-green-50 transition-all group">
-            <MessageCircle size={22} className="group-hover:scale-110 transition-transform" />
-            Chat with us on WhatsApp
-          </a>
-        </motion.div>
+  <a href="https://wa.me/917350767410" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 mt-8 py-5 rounded-2xl border-2 border-[#062419] text-[#062419] font-black text-sm hover:bg-[#062419] hover:text-white transition-all group">
+    <MessageCircle size={22} className="group-hover:scale-110 transition-transform" />
+    Chat with us on WhatsApp
+  </a>
+</motion.div>
 
         {/* INFO SECTION */}
         <motion.div
@@ -129,7 +149,7 @@ export default function Contact() {
             <div className="space-y-6">
               {[
                 { icon: <Mail size={20} />, label: "support@lemoncapshealth.com" },
-                { icon: <Phone size={20} />, label: "+91 XXXXX XXXXX" },
+                { icon: <Phone size={20} />, label: "+91 7350767410" },
                 { icon: <Globe size={20} />, label: "Serving Patients Globally" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-5 group">

@@ -7,7 +7,6 @@ import { servicesMenu } from "../../data/servicesMenu";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [hospitalOpen, setHospitalOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   const linkClass = ({ isActive }) =>
     isActive
@@ -29,44 +28,11 @@ export default function Navbar() {
           <NavLink to="/" className={linkClass}>Home</NavLink>
           <NavLink to="/about" className={linkClass}>About</NavLink>
 
-          {/* SERVICES MEGA MENU */}
-     <div
-  className="relative"
-  onMouseEnter={() => setServicesOpen(true)}
-  onMouseLeave={() => setServicesOpen(false)}
->
-  <NavLink
-    to="/services"
-    className="flex items-center gap-1 text-gray-700 hover:text-green-600"
-  >
-    Services <ChevronDown size={16} />
-  </NavLink>
+ {/* SERVICES */}
+<NavLink to="/services" className={linkClass}>
+  Services
+</NavLink>
 
-  {servicesOpen && (
-    <div className="absolute left-0 top-full mt-4 w-[620px] bg-white shadow-xl border rounded-xl p-6 grid grid-cols-2 gap-8">
-      {servicesMenu.map((section, i) => (
-        <div key={i}>
-          <h4 className="font-semibold text-gray-900 mb-3">
-            {section.title}
-          </h4>
-          <ul className="space-y-2">
-            {section.items.map((item) => (
-              <li key={item.slug}>
-                <NavLink
-                  to={`/services/${item.slug}`}
-                  className="flex justify-between text-gray-600 hover:text-green-600 text-sm"
-                >
-                  {item.label}
-                  <span>›</span>
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  )}
-</div>
 
 
           {/* HOSPITAL MEGA MENU */}
@@ -167,33 +133,16 @@ export default function Navbar() {
           About
         </NavLink>
 
-        {/* SERVICES */}
-        <div className="relative"
-  onMouseEnter={() => setServicesOpen(true)}
-  onMouseLeave={() => setServicesOpen(false)}
+    <NavLink
+  to="/services"
+  onClick={() => setOpen(false)}
+  className="block font-medium"
 >
-  <NavLink
-    to="/services"
-    className="flex items-center gap-1 text-black-700 hover:text-green-600"
-  >
-    Services <ChevronDown size={16} />
-  </NavLink>
+  Services
+</NavLink>
 
-          {servicesOpen && (
-            <div className="mt-4 pl-3 space-y-3 text-black-600">
-              {servicesMenu.flatMap(s => s.items).map(item => (
-                <NavLink
-                  key={item.slug}
-                  to={`/services/${item.slug}`}
-                  onClick={() => setOpen(false)}
-                  className="block"
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
-          )}
-        </div>
+
+     
 
         {/* HOSPITAL NETWORK */}
         <div   className="relative"

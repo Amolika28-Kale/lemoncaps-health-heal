@@ -75,14 +75,15 @@ export default function PatientJourney() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="relative mt-20 grid md:grid-cols-5 gap-4"
+className="relative mt-20 grid md:grid-cols-5 gap-4"
+
         >
           {steps.map((step, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
               whileHover={{ y: -5 }}
-              className="group relative bg-white border border-green-100 rounded-[2rem] p-8 text-center transition-all duration-300 hover:border-green-300 shadow-sm shadow-green-900/5"
+className="group relative bg-green-100/80 border border-green-300 rounded-[2rem] p-8 text-center transition-all duration-300 hover:border-green-400 hover:bg-green-150 shadow-sm shadow-green-900/5"
             >
               {/* Connector Arrow (Desktop Only) using Deep Green */}
               {i < steps.length - 1 && (

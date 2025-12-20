@@ -84,7 +84,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                     <span className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Call Support</span>
-                    <span className="text-sm text-slate-300 font-light group-hover:text-white transition-colors">+91 9XXXXXXXXX</span>
+                    <span className="text-sm text-slate-300 font-light group-hover:text-white transition-colors">+91 7350767410</span>
                 </div>
               </div>
 

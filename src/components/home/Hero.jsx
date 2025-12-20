@@ -22,7 +22,7 @@ export default function Hero() {
           animate="visible"
         >
           {/* Minimalist Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-600 text-white text-[10px] font-bold uppercase tracking-widest mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full  text-green text-[10px] font-bold uppercase tracking-widest mb-8">
             <Sparkles size={12} className="animate-pulse" />
             Trusted Globally for Medical Excellence
           </div>

@@ -3,7 +3,7 @@ import { fadeUp, stagger } from "../../utils/animations";
 
 export default function Stats() {
   const stats = [
-    { value: "5,000+", label: "International Patients Assisted" },
+    { value: "1500+", label: "International Patients Assisted" },
     { value: "200+", label: "Partner Hospitals" },
     { value: "1,000+", label: "Specialist Doctors" },
     { value: "95%", label: "Patient Satisfaction Rate" },
