@@ -196,17 +196,26 @@ export default function Navbar() {
         >
           Success Stories
         </NavLink>
+         <NavLink
+          to="/contact"
+          onClick={() => setOpen(false)}
+          className="block font-medium"
+        >
+          Contact
+        </NavLink>
       </div>
 
       {/* CTA */}
       <div className="px-6 py-5 border-t">
-        <NavLink
-          to="/contact"
+            <a
+  href="https://calendly.com/"
+  target="_blank"
+  rel="noopener noreferrer"
           onClick={() => setOpen(false)}
           className="block text-center w-full py-3 bg-green-600 text-white rounded-full font-semibold"
         >
           Free Consultation
-        </NavLink>
+        </a>
       </div>
     </div>
   </div>
