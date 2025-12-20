@@ -12,9 +12,11 @@ export default function Footer() {
 
           {/* Brand & Mission */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold tracking-tight">
-              Lemoncaps <span className="text-green-500">Health & Heal</span>
-            </h3>
+          <NavLink to="/" className="inline-block">
+               <h3 className="text-3xl font-black tracking-tighter text-white">
+                Lemon<span className="text-emerald-500 font-light">caps</span>
+              </h3>
+            </NavLink>
             <p className="text-sm text-slate-400 leading-relaxed font-light">
               Global medical tourism excellence connecting international patients 
               to India’s premier medical facilities with transparency and compassion.

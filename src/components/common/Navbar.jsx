@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { hospitalMenu } from "../../data/hospitalMenu";
-import { servicesMenu } from "../../data/servicesMenu";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,10 +16,18 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* Logo */}
-        <NavLink to="/" className="text-2xl font-bold text-green-600">
-          Lemoncaps
-        </NavLink>
+     <NavLink to="/" className="group flex items-center gap-1.5">
+  <div className="flex items-baseline">
+    <span className="text-2xl font-black tracking-tighter text-slate-900 group-hover:text-emerald-600 transition-colors duration-300">
+      Lemon
+    </span>
+    <span className="text-2xl font-light tracking-tighter text-emerald-600">
+      caps
+    </span>
+    {/* Decorative medical "plus" or dot */}
+    <span className="ml-1 h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+  </div>
+</NavLink>
 
         {/* ================= DESKTOP NAV ================= */}
         <nav className="hidden md:flex items-center gap-8 text-sm relative">
@@ -86,12 +93,15 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <NavLink
-          to="/contact"
-          className="hidden md:inline-block px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700"
-        >
-          Free Consultation
-        </NavLink>
+      <a
+  href="https://calendly.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden md:inline-block px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700"
+>
+  Free Consultation
+</a>
+
 
         {/* MOBILE TOGGLE */}
         <button onClick={() => setOpen(!open)} className="md:hidden">

@@ -112,30 +112,52 @@ export default function InternationalPatients() {
         </div>
       </div>
 
-      {/* GLOBAL PATIENTS FLAGS */}
-      <div className="py-24 border-y border-green-50 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-xs font-black text-center text-green-600 mb-14 uppercase tracking-[0.4em]">Trusted Patients From</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { name: "USA", flag: "🇺🇸" },
-              { name: "UK", flag: "🇬🇧" },
-              { name: "Germany", flag: "🇩🇪" },
-              { name: "Africa", flag: "🌍" },
-              { name: "Middle East", flag: "🕌" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -5 }}
-                className="px-10 py-5 bg-white border border-green-100 rounded-3xl flex items-center gap-4 text-[#062419] font-bold shadow-sm hover:border-green-500 hover:shadow-lg hover:shadow-green-900/5 transition-all cursor-default"
-              >
-                <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">{item.flag}</span>
-                <span className="text-lg tracking-tight">{item.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+    {/* GLOBAL PATIENTS FLAGS */}
+<div className="py-24 border-y border-green-50 bg-white">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-xs font-black text-center text-green-600 mb-14 uppercase tracking-[0.4em]">
+      Trusted Patients From
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-6">
+      {[
+        { name: "USA", flag: "🇺🇸" },
+        { name: "UK", flag: "🇬🇧" },
+        { name: "Germany", flag: "🇩🇪" },
+        { name: "Africa", flag: "🌍" },
+        { name: "Middle East", flag: "🕌" },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ y: -4, scale: 1.03 }}
+          className="
+            px-10 py-5
+            bg-white
+            border border-green-100
+            rounded-3xl
+            flex items-center gap-4
+            text-[#062419] font-bold
+            shadow-sm
+            hover:border-green-400
+            hover:shadow-xl hover:shadow-green-900/10
+            transition-all
+            cursor-default
+          "
+        >
+          {/* FLAG – FULL COLOR */}
+          <span className="text-3xl leading-none">
+            {item.flag}
+          </span>
+
+          {/* COUNTRY NAME */}
+          <span className="text-lg tracking-tight">
+            {item.name}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* WAITING PERIOD SECTION */}
       <div className="py-32 bg-white overflow-hidden">

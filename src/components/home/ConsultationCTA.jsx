@@ -34,13 +34,14 @@ export default function ConsultationCTA() {
             </p>
 
             <div className="mt-14 flex justify-center">
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-3 px-12 py-5 bg-green-500 text-[#062419] rounded-full font-black text-lg hover:bg-white transition-all shadow-xl shadow-green-900/40 active:scale-95"
-              >
+                           <a
+  href="https://calendly.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+className="group inline-flex items-center gap-3 px-12 py-5 bg-green-500 text-[#062419] rounded-full font-black text-lg hover:bg-white transition-all shadow-xl shadow-green-900/40 active:scale-95">
                 Free Consultation
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </div>
             
             {/* Trust Footer inside CTA */}
