@@ -211,7 +211,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 md:gap-x-10 gap-y-12 md:gap-y-20">
             <TeamCard name="Mr. Dayanand V. P." role="Founder & CEO" img="https://images.unsplash.com/photo-1560250097-0b93528c311a" />
             <TeamCard name="Dr. Sanjay G." role="Executive Director" img="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" />
-            <TeamCard name="Dr. Shweta S." role="Executive Director" img="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" />
+            <TeamCard name="Dr. Shweta S." role="Head of Consultation" img="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" />
             <TeamCard name="Dr. Nazim S." role="Executive Director" img="https://images.unsplash.com/photo-1537368910025-700350fe46c7" />
             <TeamCard name="Pooja Shinde" role="COO" img="https://images.unsplash.com/photo-1598257006626-48b0c252070d" />
             <TeamCard name="Parag Patankar" role="CTO" img="https://images.unsplash.com/photo-1556157382-97eda2d62296" />

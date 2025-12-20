@@ -242,7 +242,7 @@ export default function InternationalPatients() {
                   </div>
                   <div className="flex justify-between items-center opacity-40">
                     <span className="text-[10px] text-[#0a3d2e] font-bold uppercase tracking-widest">Global Avg.</span>
-                    <span className="text-lg font-bold line-through">{item.abroad}</span>
+                    <span className="text-lg font-bold">{item.abroad}</span>
                   </div>
                 </div>
                 <div className="mt-10 pt-8 border-t border-green-50 flex items-center justify-between">

@@ -36,27 +36,27 @@ const luxuryHotels = [
     hotels: [
       {
         name: "Taj Blue Diamond, Pune",
-        image: "https://th.bing.com/th/id/OIP.g1SqzLcAeMtUkKhHoEmjnwHaFS?w=185&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+        image: "https://th.bing.com/th/id/R.a601b0240e0fe5220f680346999fb216?rik=I1zGXAGiTtWzDA&riu=http%3a%2f%2fwww.india-travel.com%2fmaharashtra%2fimages%2ftaj-blue-diamond-pune-b2.jpg&ehk=XkYmWX8ZAorUu%2fH%2fDps9lAVEuZDlAt5s%2bPdm2W5UeRk%3d&risl=&pid=ImgRaw&r=0",
         desc: "Luxury heritage hotel close to top multi-specialty hospitals.",
       },
       {
         name: "JW Marriott, Pune",
-        image: "https://th.bing.com/th/id/OIP.I1PfuozZyl5PhqbbxMnHtQHaE8?w=213&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+        image: "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/03/12230202/11032018_JWmarriott_07.jpg?w=1200&h=628&fill=blur&fit=fill",
         desc: "Premium stay with international patient-friendly amenities.",
       },
       {
         name: "The Ritz-Carlton, Pune",
-        image: "https://th.bing.com/th/id/OIP.COKM71crP5ACC5hU8_NH9wHaH4?w=169&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+        image: "https://cache.marriott.com/content/dam/marriott-renditions/PNQRZ/pnqrz-aasmana-desk-7633-hor-clsc.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1215px:*",
         desc: "Ultra-luxury suites with personalized wellness services.",
       },
       {
         name: "Conrad Pune",
-        image: "https://th.bing.com/th/id/OIP.Yztp4jLnyVqCRE_gQm7cPAHaE8?w=242&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+        image: "https://www.conradpune.com/wp-content/uploads/2023/08/kabana.jpg",
         desc: "Modern luxury hotel near healthcare hubs.",
       },
       {
         name: "Hyatt Regency Pune",
-        image: "https://th.bing.com/th/id/OIP._avJ5ZsFpyUSJoRPPolyYQHaE8?w=224&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+        image:"https://familytravelgenie.com/media/wp-uploads/2024/02/Hyatt-Regency-Pune-Residences-Exterior_1.jpg",
         desc: "Comfort-focused luxury for long medical stays.",
       },
     ],
@@ -67,7 +67,7 @@ const luxuryHotels = [
     hotels: [
       {
         name: "Atmantan Wellness Resort",
-        image: "https://www.luxurygetaways.in/uploads/services/service-banner/atmantan-wellness-resort_serv_1281.jpg",
+        image: "https://atmantan.com/wp-content/uploads/2021/11/GFXS0369-scaled-e1638869200102.jpg",
         desc: "Holistic recovery & wellness retreat in nature.",
       },
       {
